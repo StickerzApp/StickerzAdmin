@@ -38,7 +38,7 @@ public class Estabelecimento implements Serializable {
 
 	//bi-directional many-to-one association to Adesaocampanha
 	@OneToMany(mappedBy="estabelecimento")
-	private List<Adesaocampanha> adesaocampanhas;
+	private List<AdesaoCampanha> adesaocampanhas;
 
 	//bi-directional many-to-one association to Terminal
 	@OneToMany(mappedBy="estabelecimento")
@@ -46,7 +46,7 @@ public class Estabelecimento implements Serializable {
 
 	//bi-directional many-to-one association to Usuarioestabelecimento
 	@OneToMany(mappedBy="estabelecimento")
-	private List<Usuarioestabelecimento> usuarioestabelecimentos;
+	private List<UsuarioEstabelecimento> usuarioestabelecimentos;
 
 	public Estabelecimento() {
 	}
@@ -131,22 +131,22 @@ public class Estabelecimento implements Serializable {
 		this.numCnpj = numCnpj;
 	}
 
-	public List<Adesaocampanha> getAdesaocampanhas() {
+	public List<AdesaoCampanha> getAdesaocampanhas() {
 		return this.adesaocampanhas;
 	}
 
-	public void setAdesaocampanhas(List<Adesaocampanha> adesaocampanhas) {
+	public void setAdesaocampanhas(List<AdesaoCampanha> adesaocampanhas) {
 		this.adesaocampanhas = adesaocampanhas;
 	}
 
-	public Adesaocampanha addAdesaocampanha(Adesaocampanha adesaocampanha) {
+	public AdesaoCampanha addAdesaocampanha(AdesaoCampanha adesaocampanha) {
 		getAdesaocampanhas().add(adesaocampanha);
 		adesaocampanha.setEstabelecimento(this);
 
 		return adesaocampanha;
 	}
 
-	public Adesaocampanha removeAdesaocampanha(Adesaocampanha adesaocampanha) {
+	public AdesaoCampanha removeAdesaocampanha(AdesaoCampanha adesaocampanha) {
 		getAdesaocampanhas().remove(adesaocampanha);
 		adesaocampanha.setEstabelecimento(null);
 
@@ -175,22 +175,22 @@ public class Estabelecimento implements Serializable {
 		return terminal;
 	}
 
-	public List<Usuarioestabelecimento> getUsuarioestabelecimentos() {
+	public List<UsuarioEstabelecimento> getUsuarioestabelecimentos() {
 		return this.usuarioestabelecimentos;
 	}
 
-	public void setUsuarioestabelecimentos(List<Usuarioestabelecimento> usuarioestabelecimentos) {
+	public void setUsuarioestabelecimentos(List<UsuarioEstabelecimento> usuarioestabelecimentos) {
 		this.usuarioestabelecimentos = usuarioestabelecimentos;
 	}
 
-	public Usuarioestabelecimento addUsuarioestabelecimento(Usuarioestabelecimento usuarioestabelecimento) {
+	public UsuarioEstabelecimento addUsuarioestabelecimento(UsuarioEstabelecimento usuarioestabelecimento) {
 		getUsuarioestabelecimentos().add(usuarioestabelecimento);
 		usuarioestabelecimento.setEstabelecimento(this);
 
 		return usuarioestabelecimento;
 	}
 
-	public Usuarioestabelecimento removeUsuarioestabelecimento(Usuarioestabelecimento usuarioestabelecimento) {
+	public UsuarioEstabelecimento removeUsuarioestabelecimento(UsuarioEstabelecimento usuarioestabelecimento) {
 		getUsuarioestabelecimentos().remove(usuarioestabelecimento);
 		usuarioestabelecimento.setEstabelecimento(null);
 

@@ -31,11 +31,11 @@ public class Campanha implements Serializable {
 
 	//bi-directional many-to-one association to Adesaocampanha
 	@OneToMany(mappedBy="campanha")
-	private List<Adesaocampanha> adesaocampanhas;
+	private List<AdesaoCampanha> adesaocampanhas;
 
 	//bi-directional many-to-one association to Campanhaadesivo
 	@OneToMany(mappedBy="campanha")
-	private List<Campanhaadesivo> campanhaadesivos;
+	private List<CampanhaAdesivo> campanhaadesivos;
 
 	public Campanha() {
 	}
@@ -88,44 +88,44 @@ public class Campanha implements Serializable {
 		this.pathImagemFundo = pathImagemFundo;
 	}
 
-	public List<Adesaocampanha> getAdesaocampanhas() {
+	public List<AdesaoCampanha> getAdesaocampanhas() {
 		return this.adesaocampanhas;
 	}
 
-	public void setAdesaocampanhas(List<Adesaocampanha> adesaocampanhas) {
+	public void setAdesaocampanhas(List<AdesaoCampanha> adesaocampanhas) {
 		this.adesaocampanhas = adesaocampanhas;
 	}
 
-	public Adesaocampanha addAdesaocampanha(Adesaocampanha adesaocampanha) {
+	public AdesaoCampanha addAdesaocampanha(AdesaoCampanha adesaocampanha) {
 		getAdesaocampanhas().add(adesaocampanha);
 		adesaocampanha.setCampanha(this);
 
 		return adesaocampanha;
 	}
 
-	public Adesaocampanha removeAdesaocampanha(Adesaocampanha adesaocampanha) {
+	public AdesaoCampanha removeAdesaocampanha(AdesaoCampanha adesaocampanha) {
 		getAdesaocampanhas().remove(adesaocampanha);
 		adesaocampanha.setCampanha(null);
 
 		return adesaocampanha;
 	}
 
-	public List<Campanhaadesivo> getCampanhaadesivos() {
+	public List<CampanhaAdesivo> getCampanhaadesivos() {
 		return this.campanhaadesivos;
 	}
 
-	public void setCampanhaadesivos(List<Campanhaadesivo> campanhaadesivos) {
+	public void setCampanhaadesivos(List<CampanhaAdesivo> campanhaadesivos) {
 		this.campanhaadesivos = campanhaadesivos;
 	}
 
-	public Campanhaadesivo addCampanhaadesivo(Campanhaadesivo campanhaadesivo) {
+	public CampanhaAdesivo addCampanhaadesivo(CampanhaAdesivo campanhaadesivo) {
 		getCampanhaadesivos().add(campanhaadesivo);
 		campanhaadesivo.setCampanha(this);
 
 		return campanhaadesivo;
 	}
 
-	public Campanhaadesivo removeCampanhaadesivo(Campanhaadesivo campanhaadesivo) {
+	public CampanhaAdesivo removeCampanhaadesivo(CampanhaAdesivo campanhaadesivo) {
 		getCampanhaadesivos().remove(campanhaadesivo);
 		campanhaadesivo.setCampanha(null);
 

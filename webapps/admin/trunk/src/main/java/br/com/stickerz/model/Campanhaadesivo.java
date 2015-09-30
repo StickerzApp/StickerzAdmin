@@ -9,8 +9,8 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@NamedQuery(name="Campanhaadesivo.findAll", query="SELECT c FROM Campanhaadesivo c")
-public class Campanhaadesivo implements Serializable {
+@NamedQuery(name="Campanhaadesivo.findAll", query="SELECT c FROM CampanhaAdesivo c")
+public class CampanhaAdesivo implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -28,7 +28,7 @@ public class Campanhaadesivo implements Serializable {
 	@JoinColumn(name="IdCampanha")
 	private Campanha campanha;
 
-	public Campanhaadesivo() {
+	public CampanhaAdesivo() {
 	}
 
 	public int getIdCampanhaAdesivo() {
