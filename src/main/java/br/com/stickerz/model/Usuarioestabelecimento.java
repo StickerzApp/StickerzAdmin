@@ -9,12 +9,12 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@NamedQuery(name="Usuarioestabelecimento.findAll", query="SELECT u FROM Usuarioestabelecimento u")
-public class Usuarioestabelecimento implements Serializable {
+@NamedQuery(name="Usuarioestabelecimento.findAll", query="SELECT u FROM UsuarioEstabelecimento u")
+public class UsuarioEstabelecimento implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId
-	private UsuarioestabelecimentoPK id;
+	private UsuarioEstabelecimentoPK id;
 
 	private byte bolAtivo;
 
@@ -23,14 +23,14 @@ public class Usuarioestabelecimento implements Serializable {
 	@JoinColumn(name="IdEstabelecimento")
 	private Estabelecimento estabelecimento;
 
-	public Usuarioestabelecimento() {
+	public UsuarioEstabelecimento() {
 	}
 
-	public UsuarioestabelecimentoPK getId() {
+	public UsuarioEstabelecimentoPK getId() {
 		return this.id;
 	}
 
-	public void setId(UsuarioestabelecimentoPK id) {
+	public void setId(UsuarioEstabelecimentoPK id) {
 		this.id = id;
 	}
 

@@ -12,6 +12,14 @@
 		<class>br.com.stickerz.model.Usuario</class>
 		<class>br.com.stickerz.model.Pessoa</class>
 		<class>br.com.stickerz.model.Rede</class>
+		<class>br.com.stickerz.model.AdesaoCampanha</class>
+		<class>br.com.stickerz.model.AdesaoCampanhaPK</class>
+		<class>br.com.stickerz.model.Campanha</class>
+		<class>br.com.stickerz.model.CampanhaAdesivo</class>
+		<class>br.com.stickerz.model.Estabelecimento</class>
+		<class>br.com.stickerz.model.Terminal</class>
+		<class>br.com.stickerz.model.UsuarioEstabelecimento</class>
+		<class>br.com.stickerz.model.UsuarioEstabelecimentoPK</class>
 
 		<exclude-unlisted-classes/>
 
